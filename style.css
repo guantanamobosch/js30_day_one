@@ -12,6 +12,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('./background.jpeg');
 }
 
 #buttons {
@@ -30,4 +31,8 @@ body {
 
 .button > h1 {
     margin: 5px;
+}
+
+.goldborder {
+    border: 5px solid gold;
 }

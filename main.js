@@ -15,7 +15,9 @@ const getSound = function (soundName) {
     return sound;
 };
 
-// event listener
+// event listeners
+
+// 1. playing sound
 document.addEventListener("keydown", function (event) {
     console.log(event.key);
     if (event.key === "a") {
@@ -45,5 +47,69 @@ document.addEventListener("keydown", function (event) {
     } else if (event.key === "l") {
         const sound = getSound("tink");
         sound.play();
+    }
+});
+
+// 2. adding gold border on keydown
+document.addEventListener("keyup", function (event) {
+    if (event.key === "a") {
+        const element = document.getElementById("clap");
+        element.classList.add("goldborder");
+    } else if (event.key === "s") {
+        const element = document.getElementById("hihat");
+        element.classList.add("goldborder");
+    } else if (event.key === "d") {
+        const element = document.getElementById("kick");
+        element.classList.add("goldborder");
+    } else if (event.key === "f") {
+        const element = document.getElementById("openhat");
+        element.classList.add("goldborder");
+    } else if (event.key === "g") {
+        const element = document.getElementById("boom");
+        element.classList.add("goldborder");
+    } else if (event.key === "h") {
+        const element = document.getElementById("ride");
+        element.classList.add("goldborder");
+    } else if (event.key === "j") {
+        const element = document.getElementById("snare");
+        element.classList.add("goldborder");
+    } else if (event.key === "k") {
+        const element = document.getElementById("tom");
+        element.classList.add("goldborder");
+    } else if (event.key === "l") {
+        const element = document.getElementById("tink");
+        element.classList.add("goldborder");
+    }
+});
+
+// 3. removing gold border on keyup
+document.addEventListener("keyup", function (event) {
+    if (event.key === "a") {
+        const element = document.getElementById("clap");
+        element.classList.remove("goldborder");
+    } else if (event.key === "s") {
+        const element = document.getElementById("hihat");
+        element.classList.remove("goldborder");
+    } else if (event.key === "d") {
+        const element = document.getElementById("kick");
+        element.classList.remove("goldborder");
+    } else if (event.key === "f") {
+        const element = document.getElementById("openhat");
+        element.classList.remove("goldborder");
+    } else if (event.key === "g") {
+        const element = document.getElementById("boom");
+        element.classList.remove("goldborder");
+    } else if (event.key === "h") {
+        const element = document.getElementById("ride");
+        element.classList.remove("goldborder");
+    } else if (event.key === "j") {
+        const element = document.getElementById("snare");
+        element.classList.remove("goldborder");
+    } else if (event.key === "k") {
+        const element = document.getElementById("tom");
+        element.classList.remove("goldborder");
+    } else if (event.key === "l") {
+        const element = document.getElementById("tink");
+        element.classList.remove("goldborder");
     }
 });
