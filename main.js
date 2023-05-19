@@ -9,8 +9,6 @@ const snare = document.getElementById("snare");
 const tom = document.getElementById("tom");
 const tink = document.getElementById("tink");
 
-const testSound = new Audio("./sounds/boom.wav");
-
 // function to get sound
 const getSound = function (soundName) {
     const sound = new Audio(`./sounds/${soundName}.wav`);
@@ -20,7 +18,6 @@ const getSound = function (soundName) {
 // event listener
 document.addEventListener("keydown", function (event) {
     console.log(event.key);
-    // testSound.play;
     if (event.key === "a") {
         const sound = getSound("clap");
         sound.play();
